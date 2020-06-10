@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.text{
 			width: 200px;
 			height: 30px;
@@ -58,9 +62,6 @@
 		#btn{
 			width: 80px;
 			height: 30px;
-		}
-		.left{
-			text-align: left !important;
 		}
 		</style>
 	</head>
@@ -91,7 +92,9 @@
 						</div>
 						<p><strong>${msg}</strong></p>	
 					</form>
-					<a href="${pageContext.request.contextPath}/SignUp">회원가입</a>
+					<div>
+						<a href="${pageContext.request.contextPath}/SignUp">아이디가 없으신가요?</a>
+					</div>
 				</div>
 			</div>
 		</div>

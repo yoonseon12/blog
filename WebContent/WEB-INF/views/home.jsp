@@ -48,8 +48,12 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.hover:hover{
-			color:red;
+			font-weight: bolder;
 		}
 		a{
 			text-decoration: none !important;
@@ -57,13 +61,6 @@
 		}
 		.color{
 			color:blue;
-		}
-		fieldset{
-			padding:20px 20px;
-			height: 400px;
-		}
-		.center{
-			text-align: center;
 		}
 		</style>
 	</head>

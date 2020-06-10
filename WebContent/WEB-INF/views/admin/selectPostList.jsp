@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>관리자-포스트관리</title>
 		<style>
-			body {
+		body {
 			padding: 0;
 			margin: 0;
 			width: 100%;
@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		table{
 			width:1000px;
 		    border-collapse: collapse;
@@ -77,7 +81,7 @@
 			color: black;
 		}
 		.hover:hover{
-			color:blue;
+			font-weight: bolder;
 		}
 		.aTag{
 			padding-right: 15px;
@@ -120,9 +124,6 @@
 								</tr>
 							</c:forEach>
 						</table>
-						<div>
-							<a class="hover" style="padding-left:20px;" href="${pageContext.request.contextPath}/admin/InsertPostServlet">글쓰기</a>
-						</div>
 						<div class="page" style="text-align: center;">
 							<a class="aTag" href="${pageContext.request.contextPath}/admin/SelectPostListServlet?currentPage=1">처음</a>
 							<c:if test="${currentPage == 1}">
@@ -146,6 +147,9 @@
 							<p><strong>등록된 글이 없습니다.</strong></p>
 						</div>
 					</c:if>
+					<div>
+						<a class="hover" style="padding-left:20px;" href="${pageContext.request.contextPath}/admin/InsertPostServlet">글쓰기</a>
+					</div>
 				</div>
 			</div>	
 		</div>

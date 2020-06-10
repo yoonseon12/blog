@@ -34,9 +34,4 @@ public class AdminHomeServlet extends HttpServlet {
 		//뷰
 		request.getRequestDispatcher("/WEB-INF/views/admin/adminHome.jsp").forward(request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
 }

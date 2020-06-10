@@ -16,7 +16,7 @@ public class MemberIdDao {
 	//회원 탈퇴시 삭제된 아이디를 추가
 	public void insertMemberId(Connection conn, String memberId) throws SQLException {
 		System.out.println(memberId+" <- MemberIdDao 매개변수 memberId");
-		String sql="INSERT INTO memberid(memberId, memberId_date) VALUES(?, now())";
+		String sql="INSERT INTO blog_memberid(memberid, memberid_date) VALUES(?, now())";
 		try { // try절에서 예외가 발생하면 무조건 finally절을 실행한다.
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, memberId);

@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.content{
 			width:994px;
 			height:240px;

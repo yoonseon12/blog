@@ -15,7 +15,7 @@ public class PostDao {
 		Post post = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String sql ="SELECT * FROM post WHERE post_no=?";
+		String sql ="SELECT * FROM blog_post WHERE post_no=?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, postNo);
@@ -41,7 +41,7 @@ public class PostDao {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		List<Post> list = new ArrayList<Post>();
-		String sql="SELECT * FROM post ORDER BY post_no DESC LIMIT ?, ?";
+		String sql="SELECT * FROM blog_post ORDER BY post_no DESC LIMIT ?, ?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, beginRow);
@@ -65,7 +65,7 @@ public class PostDao {
 	// 페이징-데이터 총개수
 	public int countPost(Connection conn) throws SQLException {
 		int count = 0;
-		String sql = "SELECT count(*) from post";
+		String sql = "SELECT count(*) from blog_post";
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {
@@ -88,7 +88,7 @@ public class PostDao {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		List<Post> list = new ArrayList<Post>();
-		String sql="SELECT * FROM post WHERE subject_name=? ORDER BY post_no desc LIMIT ?,?";
+		String sql="SELECT * FROM blog_post WHERE subject_name=? ORDER BY post_no desc LIMIT ?,?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, subjectName);
@@ -115,7 +115,7 @@ public class PostDao {
 		System.out.println(subjectName+" <-- PostDao.selectPostBySubjectCount subjectName(선택한 서브젝트이름)");
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String sql ="SELECT count(*) FROM post WHERE subject_name=?";
+		String sql ="SELECT count(*) FROM blog_post WHERE subject_name=?";
 		int count = 0;
 		try {
 			stmt = conn.prepareStatement(sql);
@@ -135,7 +135,7 @@ public class PostDao {
 	public void insertPost(Connection conn, Post post) throws SQLException {
 		PreparedStatement stmt = null;
 		String sql ="INSERT INTO "
-				+ "post(member_id, subject_name, post_title, post_content, post_date) "
+				+ "blog_post(member_id, subject_name, post_title, post_content, post_date) "
 				+ "VALUES(?,?,?,?,NOW())";
 		try {
 			stmt = conn.prepareStatement(sql);
@@ -151,7 +151,7 @@ public class PostDao {
 	// 포스트 삭제
 	public void deletePost(Connection conn, int postNo) throws SQLException {
 		PreparedStatement stmt = null;
-		String sql = "DELETE FROM post WHERE post_no=?";
+		String sql = "DELETE FROM blog_post WHERE post_no=?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, postNo);
@@ -163,7 +163,7 @@ public class PostDao {
 	// 포스트 삭제될때 좋아요 삭제(포스트에 있는 댓글 전부 삭제되도록 매개변수값만 member_id로 받음)
 	public void deleteMemberByPost(Connection conn, String memberId) throws SQLException {
 		PreparedStatement stmt = null;
-		String sql ="DELETE FROM post WHERE member_id=?";
+		String sql ="DELETE FROM blog_post WHERE member_id=?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, memberId);
@@ -175,7 +175,7 @@ public class PostDao {
 	// 포스트 수정
 	public void updatePost(Connection conn, Post post) throws SQLException {
 		PreparedStatement stmt = null;
-		String sql = "UPDATE post SET subject_name=?, post_title=?, post_content=? WHERE post_no=?";
+		String sql = "UPDATE blog_post SET subject_name=?, post_title=?, post_content=? WHERE post_no=?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, post.getSubjectName());

@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		table{
 			width:500px;
 		    border-collapse: collapse;
@@ -80,6 +84,9 @@
 		}
 		.textColor{
 			color:blue;
+		}
+		.textColor:hover{
+			font-weight: bolder;
 		}
 		.aTag{
 			padding-right: 15px;

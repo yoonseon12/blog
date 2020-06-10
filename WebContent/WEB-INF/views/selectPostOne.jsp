@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>${post.postTitle}</title>
 		<style>
-			body {
+		body {
 			padding: 0;
 			margin: 0;
 			width: 100%;
@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.content{
 			width:1000px;
 		    border: 1px solid #A6A6A6;
@@ -62,7 +66,7 @@
 			padding : 10px 0px;
 		}
 		.contentTd{
-			padding : 20px 20px;
+			padding : 10px 15px;
 			font-size: 17px;
 			height: 200px;
 		}
@@ -89,7 +93,9 @@
 		}
 		.color{
 			color:#4641D9;
-			padding:5px 15px;
+		}
+		.color:hover {
+			font-weight: bolder;
 		}
 		.button{
 			text-decoration: none;
@@ -107,7 +113,7 @@
 			bottom:0px;
 		}
 		.commentLink:hover {
-			color:blue;
+			font-weight: bolder;
 		}
 		</style>
 	</head>
@@ -149,7 +155,9 @@
 						<c:if test="${(loginMember.memberId==post.memberId)||(loginMember.memberLevel<10)}">
 							<div style="float: right;">
 								<a class="color" href="${pageContext.request.contextPath}/member/UpdatePostOneServlet?postNo=${post.postNo}&subjectName=${post.subjectName}">게시글수정</a>
+								&nbsp;&nbsp;
 								<a class="color" href="${pageContext.request.contextPath}/member/DeletePostServlet?postNo=${post.postNo}&subjectName=${post.subjectName}">게시글삭제</a>
+								&nbsp;
 							</div>	
 						</c:if>
 					</div>
@@ -163,16 +171,17 @@
 								<span>${likeyMap.goodCount}</span>
 						</c:if>
 						<c:if test="${loginMember!=null}">
-							<a style="color:#4641D9;" href="${pageContext.request.contextPath}/member/AddLikeyServlet?postNo=${post.postNo}&likeyCk=1">좋아요</a>
+							<a class="color" href="${pageContext.request.contextPath}/member/AddLikeyServlet?postNo=${post.postNo}&likeyCk=1">좋아요</a>
 							<span>${likeyMap.goodCount}</span>
 						</c:if>
 						<!-- 싫어요 -->
+						&nbsp;
 						<c:if test="${loginMember==null}">
 								<span style="color:#4641D9;">싫어요 </span>
 								<span>${likeyMap.badCount}</span>
 						</c:if>
 						<c:if test="${loginMember!=null}">
-							<a style="color:#4641D9;" href="${pageContext.request.contextPath}/member/AddLikeyServlet?postNo=${post.postNo}&likeyCk=0">싫어요 </a>
+							<a class="color" href="${pageContext.request.contextPath}/member/AddLikeyServlet?postNo=${post.postNo}&likeyCk=0">싫어요 </a>
 							<span>${likeyMap.badCount}</span>
 						</c:if>
 						<span><strong>${msg}</strong></span>

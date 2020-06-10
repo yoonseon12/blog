@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.content{
 			width:1000px;
 		    border: 1px solid #A6A6A6;
@@ -62,7 +66,7 @@
 			padding : 10px 0px;
 		}
 		.contentTd{
-			padding : 20px 20px;
+			padding : 10px 15px;
 			font-size: 17px;
 			height: 200px;
 		}
@@ -132,6 +136,7 @@
 					<div style="margin-bottom: 20px;">
 						<span style="color:#4641D9;">좋아요 </span>
 						<span>${likeyMap.goodCount}</span>
+						&nbsp;
 						<span style="color:#4641D9;">싫어요 </span>
 						<span>${likeyMap.badCount}</span>
 					</div>

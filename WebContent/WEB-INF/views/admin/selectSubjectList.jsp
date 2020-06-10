@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.text{
 			width: 250px;
 			height: 30px;
@@ -89,7 +93,9 @@
 		}
 		.textColor{
 			color:blue;
-			display: block;
+		}
+		.textColor:hover{
+			font-weight: bolder;
 		}
 		.aTag{
 			padding-right: 15px;

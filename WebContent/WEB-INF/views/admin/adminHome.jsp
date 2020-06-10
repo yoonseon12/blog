@@ -48,11 +48,15 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		.marginBottom10{
 			margin-bottom: 10px;
 		}
 		.hover:hover{
-			color:red;
+			font-weight: bolder;
 		}
 		a{
 			text-decoration: none !important;

@@ -48,6 +48,10 @@
 			text-decoration:none;
 			font-size:19px;
 		}
+		.menuLink:hover{
+			font-size:20px;
+			font-weight: 700;
+		}
 		table{
 			width:1000px;
 		    border-collapse: collapse;
@@ -77,7 +81,7 @@
 			color: black;
 		}
 		.hover:hover{
-			color:blue;
+			font-weight:bolder;
 			display: block;
 		}
 		.aTag{

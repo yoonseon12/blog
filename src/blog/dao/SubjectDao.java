@@ -13,7 +13,7 @@ public class SubjectDao {
 	// 서브젝트 목록
 	public List<Subject> seleteSubjectListAll(Connection conn) throws Exception{
 		List<Subject> list = new ArrayList<Subject>(); // 현재 size ->0
-		String sql="SELECT * FROM subject ORDER BY subject_name asc";
+		String sql="SELECT * FROM blog_subject ORDER BY subject_name asc";
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {
@@ -35,7 +35,7 @@ public class SubjectDao {
 	// 서브젝트 추가 
 	public void insertSubject(Connection conn, Subject subject) throws SQLException {
 		System.out.println(subject.getSubjectName());
-		String sql="INSERT INTO subject(subject_name, subject_date) VALUES(?,now())";
+		String sql="INSERT INTO blog_subject(subject_name, subject_date) VALUES(?,now())";
 		PreparedStatement stmt = null;
 		try {
 			stmt = conn.prepareStatement(sql);
@@ -49,7 +49,7 @@ public class SubjectDao {
 	public boolean selectSubjectName(Connection conn, Subject subject) throws SQLException {
 		System.out.println(subject.getSubjectName()+" <-- SubjectDao.selectSubjectName() 매개변수 값 확인");
 		boolean flag = true; // 중복값 없으면(사용할 수 있으면) ture 있으면 (사용할 수 없으면) false
-		String sql="SELECT subject_name FROM subject WHERE subject_name=?";
+		String sql="SELECT subject_name FROM blog_subject WHERE subject_name=?";
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {
@@ -69,7 +69,7 @@ public class SubjectDao {
 	//서브젝트 삭제
 	public void deleteSubject(Connection conn, int subjectNo) throws Exception {
 		PreparedStatement stmt = null;
-		String sql = "DELETE FROM Subject WHERE subject_no=?";
+		String sql = "DELETE FROM blog_subject WHERE subject_no=?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, subjectNo);
@@ -81,7 +81,7 @@ public class SubjectDao {
 	//서브젝트no로 서브젝트 이름을 알아내는 메소드
 	public Subject selectSubjectNameOne(Connection conn, int subjectNo) throws SQLException {
 		Subject subject = null;
-		String sql = "SELECT subject_name FROM subject WHERE subject_no=?";
+		String sql = "SELECT subject_name FROM blog_subject WHERE subject_no=?";
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {
@@ -103,7 +103,7 @@ public class SubjectDao {
 	public void updateSubject(Connection conn, String subjectName, String newSubjectName) throws Exception {
 		System.out.println(subjectName+" <- subjectName Dao매개변수 확인");
 		System.out.println(newSubjectName+" <- newSubjectName Dao매개변수 확인");
-		String sql = "UPDATE subject SET subject_name=? WHERE subject_name=?";
+		String sql = "UPDATE blog_subject SET subject_name=? WHERE subject_name=?";
 		PreparedStatement stmt = null;
 		try {
 			stmt = conn.prepareStatement(sql);
