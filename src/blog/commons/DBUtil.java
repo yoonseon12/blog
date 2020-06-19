@@ -7,7 +7,7 @@ public class DBUtil {
 	public static Connection getConection() throws ClassNotFoundException, SQLException {
 		Connection conn = null;
 		Class.forName("org.mariadb.jdbc.Driver");
-		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/yoonseon12", "root", "java1234");
+		conn = DriverManager.getConnection("jdbc:mariadb://yoonseon12.cafe24.com/yoonseon12", "yoonseon12", "java1004");
 		return conn;
 	}
 	// close

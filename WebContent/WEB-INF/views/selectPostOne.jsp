@@ -21,20 +21,20 @@
 		}
 		#aside {
 			width: 200px;
-			height: 3000px;
+			height: 100%;
 			position: fixed;
 			background: #353535;
 			overflow: hidden;
 			float: left;
 		}
 		#section {
-			margin-left: 530px;
-			margin-right:500px;
-			width:1000px;
+			margin-left: 220px;
 			background: white;
 		}
 		#main {
-			padding-top:80px;
+			margin : 0px auto;
+			width:1000px;
+			padding-top:50px;
 			padding-bottom:50px;
 		}
 		#menu{
@@ -76,12 +76,14 @@
 			height: 40px;
 		}
 		#commentBtn{
-			width: 130px;
-			height: 81px;
+			width: 118px;
+			height: 97px;
 			vertical-align: middle;
 		}
 		textarea {
+			padding : 10px 10px;
 			vertical-align: middle;
+			width: 850px;
 		}
 		.aTag{
 			padding-right: 15px;
@@ -105,7 +107,6 @@
 			margin:20px;
 			display:inline-block;
 			border-radius: 15px;
-			border-color: red;
 		}
 		.commentLink{
 			font-size:12px;
@@ -192,7 +193,7 @@
 					<form method="post" action="${pageContext.request.contextPath}/member/AddCommentServlet">
 						<input type="hidden" name="postNo" value="${post.postNo}">
 						<div>
-							<textarea rows="5" cols="120" name="commentContent"></textarea>
+							<textarea rows="5" name="commentContent"></textarea>
 							<button id="commentBtn" type="submit">등록</button>
 						</div>	
 					</form>

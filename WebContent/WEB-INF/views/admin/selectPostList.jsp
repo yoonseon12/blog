@@ -21,19 +21,19 @@
 		}
 		#aside {
 			width: 200px;
-			height: 3000px;
+			height: 100%;
 			position: fixed;
 			background: #353535;
 			overflow: hidden;
 			float: left;
 		}
 		#section {
-			margin-left: 530px;
-			margin-right:500px;
-			width:1000px;
+			margin-left: 220px;
 			background: white;
 		}
 		#main {
+			margin : 0px auto;
+			width:1000px;
 			padding-top:50px;
 			padding-bottom:50px;
 		}

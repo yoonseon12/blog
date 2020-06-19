@@ -55,7 +55,7 @@ public class InsertSubjectServlet extends HttpServlet {
 		subjectService.getInsertSubject(subject);
 		System.out.println("서브젝트 이름 추가 완료");
 		// 뷰
-		response.sendRedirect(request.getContextPath()+"/admin/SubjectListServlet");
+		response.sendRedirect(request.getContextPath()+"/admin/SelectSubjectListServlet");
 	}
 
 }

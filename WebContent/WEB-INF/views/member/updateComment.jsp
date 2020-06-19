@@ -21,20 +21,20 @@
 		}
 		#aside {
 			width: 200px;
-			height: 3000px;
+			height: 100%;
 			position: fixed;
 			background: #353535;
 			overflow: hidden;
 			float: left;
 		}
 		#section {
-			margin-left: 530px;
-			margin-right:500px;
-			width:1000px;
+			margin-left: 220px;
 			background: white;
 		}
 		#main {
-			padding-top:80px;
+			margin : 0px auto;
+			width:1000px;
+			padding-top:50px;
 			padding-bottom:50px;
 		}
 		#menu{
@@ -75,13 +75,15 @@
 			font-size: 15px;
 			height: 40px;
 		}
-		#commentBtn{
-			width: 130px;
-			height: 81px;
+		.commentBtn{
+			width: 118px;
+			height: 97px;
 			vertical-align: middle;
 		}
 		textarea {
+			padding : 10px 10px;
 			vertical-align: middle;
+			width: 850px;
 		}
 		.color{
 			color:#4641D9;
@@ -145,8 +147,8 @@
 				<div style="margin-bottom: 20px;">
 					<input type="hidden" name="postNo" value="${post.postNo}">
 					<div>
-						<textarea readonly="readonly" rows="5" cols="120" name="commentContent"></textarea>
-						<button id="commentBtn" type="button">등록</button>
+						<textarea readonly="readonly" rows="5" name="commentContent"></textarea>
+						<button class="commentBtn" type="button">등록</button>
 					</div>	
 				</div>
 				<!-- 댓글 목록 -->
@@ -167,8 +169,8 @@
 								<input type="hidden" name="postNo" value="${post.postNo}">
 								<input type="hidden" name="commentNo" value="${comment.commentNo}">
 								<div>
-									<textarea rows="5" cols="120" name="commentContent">${comment.commentContent}</textarea>
-									<button id="commentBtn" type="submit">댓글 수정</button>
+									<textarea rows="5"  name="commentContent">${comment.commentContent}</textarea>
+									<button class="commentBtn" type="submit">댓글 수정</button>
 								</div>	
 							</div>
 						</form>

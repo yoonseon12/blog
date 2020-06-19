@@ -21,19 +21,19 @@
 		}
 		#aside {
 			width: 200px;
-			height: 3000px;
+			height: 100%;
 			position: fixed;
 			background: #353535;
 			overflow: hidden;
 			float: left;
 		}
 		#section {
-			margin-left: 200px;
+			margin-left: 220px;
 			background: white;
-			width:1720px;
-			text-align: center;
 		}
 		#main {
+			margin : 0px auto;
+			width:208px;
 			padding-top:100px;
 			padding-bottom:50px;
 		}
@@ -73,33 +73,33 @@
 		<div id="section">
 			<div id="main">
 				<!-- 제목 -->
-				<div>
+				<div style="text-align: center;">
 					<h2>회원가입</h2>
 				</div>
 				<!-- 회원가입 란 -->
 				<div>
 					<form method="post" action="${pageContext.request.contextPath}/SignUp">
-						<div style="width:1575px;">
+						<div>
 							<span>아이디</span>
 							<span style="color:orange;">*</span>
 						</div>
 						<div>	
 							<input class="text" type="text" name="memberId">
 						<div>
-						<div style="width:1590px;">
+						<div>
 							<span>비밀번호</span>
 							<span style="color:orange;">*</span>
 						</div>	
 							<input class="text" type="password" name="memberPw1">
 						</div>
 						<div>
-						<div style="width:1630px;">
+						<div>
 							<span>비밀번호 확인</span>
 							<span style="color:orange;">*</span>
 						</div>	
 							<input class="text" type="password" name="memberPw2">
 						</div>
-						<div style="margin-top:20px; margin-bottom:20px">
+						<div style="margin-top:20px; margin-bottom:20px; text-align: center;">
 							<button id="btn" type="submit">가입하기</button>
 						</div>
 						<div>

@@ -21,19 +21,19 @@
 		}
 		#aside {
 			width: 200px;
-			height: 3000px;
+			height: 100%;
 			position: fixed;
 			background: #353535;
 			overflow: hidden;
 			float: right;
 		}
 		#section {
-			margin-left: 530px;
-			margin-right:500px;
-			width:1000px;
+			margin-left: 220px;
 			background: white;
 		}
 		#main {
+			margin : 0px auto;
+			width:1000px;
 			padding-top:50px;
 			padding-bottom:50px;
 		}
@@ -108,7 +108,7 @@
 						<!-- 개발 프로그램 -->
 						<div>
 							<div style="margin-bottom:20px;">
-								<span style="font-size: 20px; font-weight: 700;">MODEL2구조로 설계하였으며 JSP / JSTL을 사용한 프로젝트입니다.</span>
+								<span style="font-size: 20px; font-weight: 700;">MODEL2방식으로 구현하였으며 JSP / JSTL을 사용한 프로젝트입니다.</span>
 							</div>
 							<div style="margin-bottom:20px;">
 								<span style="font-size:20px;"><strong>개발 환경</strong></span>
