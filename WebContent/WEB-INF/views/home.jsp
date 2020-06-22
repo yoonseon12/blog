@@ -3,6 +3,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Popper JS -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<!-- icon -->
+		<link rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+			crossorigin="anonymous">
 		<meta charset="UTF-8">
 		<title>Home</title>
 		<style>
@@ -62,6 +79,9 @@
 		.color{
 			color:blue;
 		}
+		img{
+			margin : 0px 10px;
+		}
 		</style>
 	</head>
 	<body>
@@ -106,32 +126,86 @@
 							<p>운영자 : 관리자 권한 + 회원레벨수정 가능(일반회원 -> 관리자 승격 가능)</p>
 						</div>
 						<!-- 개발 프로그램 -->
-						<div>
-							<div style="margin-bottom:20px;">
-								<span style="font-size: 20px; font-weight: 700;">MODEL2방식으로 구현하였으며 JSP / JSTL을 사용한 프로젝트입니다.</span>
-							</div>
-							<div style="margin-bottom:20px;">
-								<span style="font-size:20px;"><strong>개발 환경</strong></span>
+						<!-- 개발 프로그램 -->
+				<div class="text-center" style="margin-bottom:20px;">
+					<span style="font-size:20px;"><strong>개발 환경</strong></span>
+				</div>
+				<div>
+					<div class="row text-center" style="margin-bottom: 40px;">
+						<div class="col-sm-2">
+							<div>
+								<h4>Language</h4>
 							</div>
 							<div>
-								<div style="margin-bottom: 40px;">
-									<img width='150' height='150' src="${pageContext.request.contextPath}/imgs/java.jpg">
-									<span>JAVA 1.80_241</span>
-									<span style="padding-left:100px;">
-										<img width='150' height='150' src="${pageContext.request.contextPath}/imgs/eclipse.jpg">
-										<span>ECLIPSE 4.14.0</span>
-									</span>	
-								</div>
 								<div>
-									<img width='150' height='150' src="${pageContext.request.contextPath}/imgs/mariadb.jpg">
-									<span>MARIA DB 10.4</span>
-									<span style="padding-left:100px;">
-										<img width='150' height='150' src="${pageContext.request.contextPath}/imgs/tomcat.jpg">
-										<span>APACHE-TOMCAT 9.0.30</span>
-									</span>	
+									JAVA <small>v.1.8</small>
 								</div>
 							</div>
 						</div>
+						<div class="col-sm-2">
+							<div>
+								<h4>Front Skill</h4>
+							</div>
+							<div>
+								<div>
+									HTML5
+								</div>
+								<div>
+									CSS
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div>
+								<h4>Back Skill</h4>
+							</div>
+							<div>
+								JSP / JSTL
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div>
+								<h4>DB</h4>
+							</div>
+							<div>
+								MariaDB <small>v.10.4</small>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div>
+								<h4>Tool</h4>
+							</div>
+							<div>
+								<div>
+									Eclipse<small> v.4.14</small>
+								</div>
+								<div>
+									HeidiSQL
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div>
+								<h4>Web Server</h4>
+							</div>
+							<div>
+								Tomcat<small> v.9</small>
+							</div>
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="text-center">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/java.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/html5.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/jsp.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/jstl.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/mariadb.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/eclipse.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/heidisql.jpg">
+						<img width='80' height='80' src="<%=request.getContextPath()%>/imgs/tomcat.jpg">
+					</div>
+				</div>
 					</div>
 				</div>
 			</div>
